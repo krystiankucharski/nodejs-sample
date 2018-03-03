@@ -7,6 +7,10 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 })
 
+app.get('/status', function(req, res){
+    res.status(202).send('OK');
+})
+
 app.listen(port, function(){
     console.log("App is listetning at port:", port);
 });
